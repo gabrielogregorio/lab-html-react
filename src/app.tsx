@@ -22,7 +22,7 @@ export const App = () => {
 
     try {
       const title = 'I am notify';
-      const img = `${envs.VITE_BASE_URL.replace('/', '')}/foto.jpg`;
+      const img = envs.VITE_BASE_URL ? './foto.jpg' : '/foto.jpg';
       const text = `I' am a text`;
       const notification = new Notification(title, { body: text, icon: img });
       setTimeout(() => {
