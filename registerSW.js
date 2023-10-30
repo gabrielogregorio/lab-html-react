@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/lab-html-reactsw.js', { scope: '/lab-html-react' })})}
