@@ -26,7 +26,7 @@ jobs:
 
       - name: build App
         run: |
-          echo "export const envs = { VITE_BASE_URL: '/lab-html-react', VITE_ENVIRONMENT: 'production' };" > src/core/env.ts
+          echo "export const envs = { VITE_BASE_URL: '/lab-html-react', VITE_ENVIRONMENT: 'production' };" > src/env.ts
           yarn build
 
       - name: Deploy with gh-pages
