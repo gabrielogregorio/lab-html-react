@@ -4,7 +4,7 @@ import { resolve } from 'path';
 import { VitePWA } from 'vite-plugin-pwa';
 import { envs } from './src/env';
 
-const baseUrl = envs.VITE_BASE_URL || '/lab-html-react';
+const baseUrl = envs.VITE_BASE_URL || '/lab-web';
 
 export default defineConfig({
   root: '.',

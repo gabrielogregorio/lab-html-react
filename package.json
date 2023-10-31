@@ -1,7 +1,7 @@
 {
-  "name": "lab-html-react",
+  "name": "lab-web",
   "version": "3.4.0",
-  "homepage": "https://gabrielogregorio.github.io/lab-html-react",
+  "homepage": "https://gabrielogregorio.github.io/lab-web",
   "private": false,
   "main": "build/index.js",
   "engines": {
