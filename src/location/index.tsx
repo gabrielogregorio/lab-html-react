@@ -11,7 +11,14 @@ export const Location = ({ setCurrentScreen }: IScreenProps) => {
         <div>error={JSON.stringify(error)}</div>
         <div>isLoading={JSON.stringify(isLoading)}</div>
         <div>timestamp={JSON.stringify(timestamp)}</div>
-        <div>coords={JSON.stringify(coords)}</div>
+        <div>accuracy={JSON.stringify(coords?.accuracy)}</div>
+        <div>altitude={JSON.stringify(coords?.altitude)}</div>
+        <div>altitudeAccuracy={JSON.stringify(coords?.altitudeAccuracy)}</div>
+        <div>heading={JSON.stringify(coords?.heading)}</div>
+        <div>latitude={JSON.stringify(coords?.latitude)}</div>
+        <div>longitude={JSON.stringify(coords?.longitude)}</div>
+        <div>speed={JSON.stringify(coords?.speed)}</div>
+
         <div>isReady={JSON.stringify(isReady)}</div>
       </div>
     </Layout>
