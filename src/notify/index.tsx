@@ -1,10 +1,12 @@
 import { useState } from 'react';
-import { envs } from './env';
+import { envs } from '../env';
+import { IScreenProps } from '../types';
+import { Layout } from '../layout';
 
 const TIME_TO_CLOSE_IN_MS = 5000;
 const browserHasSupport = 'Notification' in window;
 
-export const App = () => {
+export const Notify = ({ setCurrentScreen }: IScreenProps) => {
   const [hasPermission, setHasPermission] = useState(false);
 
   const askPermission = () => {
@@ -18,8 +20,6 @@ export const App = () => {
   };
 
   const sendNotify = () => {
-    // /
-
     try {
       const title = 'I am notify';
       const img = envs.VITE_BASE_URL ? './foto.jpg' : '/foto.jpg';
@@ -32,13 +32,14 @@ export const App = () => {
       //
     }
   };
+
   return (
-    <div className="flex flex-col gap-4">
+    <Layout setCurrentScreen={setCurrentScreen} className="flex items-center justify-center flex-col gap-4">
       <div>
         {browserHasSupport ? (
           <button
             onClick={() => askPermission()}
-            className="border-2 border-[#f9f8fd] px-3 py-2 text-white"
+            className="border-2 border-black px-3 py-2 text-black hover:bg-black hover:text-white transition-all duration-150"
             type="button">
             Receive notifications {hasPermission ? '✅' : '🤔'}
           </button>
@@ -48,11 +49,14 @@ export const App = () => {
       </div>
       <div>
         {hasPermission ? (
-          <button type="button" onClick={() => sendNotify()} className="border-2 border-[#f9f8fd] px-3 py-2 text-white">
+          <button
+            type="button"
+            onClick={() => sendNotify()}
+            className="border-2 border-black px-3 py-2 text-black hover:bg-black hover:text-white transition-all duration-150">
             Send me a notification 💌
           </button>
         ) : undefined}
       </div>
-    </div>
+    </Layout>
   );
 };

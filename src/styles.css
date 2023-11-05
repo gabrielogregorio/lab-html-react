@@ -9,3 +9,7 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+.leaflet-container {
+  width: 800px;
+  height: 800px;
+}
