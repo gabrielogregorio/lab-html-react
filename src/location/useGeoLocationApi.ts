@@ -21,7 +21,19 @@ export const useGeolocation = (options: PositionOptions = {}) => {
       setIsLoading(false);
       setError(null);
       setIsReady(true);
-      setState({ ...position });
+
+      setState({
+        timestamp: position.timestamp,
+        coords: {
+          accuracy: position.coords.accuracy,
+          altitude: position.coords.altitude,
+          altitudeAccuracy: position.coords.altitudeAccuracy,
+          heading: position.coords.heading,
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude,
+          speed: position.coords.speed,
+        },
+      });
     };
 
     const onError = (err: GeolocationPositionError) => {
