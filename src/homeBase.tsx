@@ -30,6 +30,13 @@ export const HomeBase = ({ setCurrentScreen }: IScreenProps) => {
         className="border-2 border-black text-black px-3 py-2 hover:text-white hover:bg-black transition-all duration-150 font-sans font-bold ">
         IndexDb
       </button>
+
+      <button
+        type="button"
+        onClick={() => setCurrentScreen('Form')}
+        className="border-2 border-black text-black px-3 py-2 hover:text-white hover:bg-black transition-all duration-150 font-sans font-bold ">
+        Form
+      </button>
     </div>
   );
 };

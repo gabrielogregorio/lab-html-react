@@ -1,4 +1,5 @@
 import { Dispatch, ReactElement, SetStateAction, useState } from 'react';
+import { Form } from './form';
 import { Map } from './map';
 import { Location } from './location';
 import { screens } from './types';
@@ -13,6 +14,7 @@ const specialScreens: specialScreensType = {
   Home: (setCurrentScreen) => <HomeBase setCurrentScreen={setCurrentScreen} />,
   Notify: (setCurrentScreen) => <Notify setCurrentScreen={setCurrentScreen} />,
   IndexDb: (setCurrentScreen) => <IndexDb setCurrentScreen={setCurrentScreen} />,
+  Form: (setCurrentScreen) => <Form setCurrentScreen={setCurrentScreen} />,
 };
 
 export const Home = () => {
