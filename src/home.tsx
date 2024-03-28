@@ -6,6 +6,7 @@ import { screens } from './types';
 import { HomeBase } from './homeBase';
 import { Notify } from './notify';
 import { IndexDb } from './indexdb';
+import { Tags } from './tags';
 
 type specialScreensType = { [key in screens]: (setCurrentScreen: Dispatch<SetStateAction<screens>>) => ReactElement };
 const specialScreens: specialScreensType = {
@@ -15,6 +16,7 @@ const specialScreens: specialScreensType = {
   Notify: (setCurrentScreen) => <Notify setCurrentScreen={setCurrentScreen} />,
   IndexDb: (setCurrentScreen) => <IndexDb setCurrentScreen={setCurrentScreen} />,
   Form: (setCurrentScreen) => <Form setCurrentScreen={setCurrentScreen} />,
+  Tags: (setCurrentScreen) => <Tags setCurrentScreen={setCurrentScreen} />,
 };
 
 export const Home = () => {
